@@ -481,15 +481,15 @@
       <div class="form-box">
         <div class="form-box-title">Get Your Free Kit Now</div>
         <div class="form-box-sub">Takes 30 seconds. We'll send everything straight to your inbox.</div>
-        <div class="form-fields">
-          <div class="form-row">
-            <input type="text" placeholder="First name"/>
-            <input type="text" placeholder="Last name"/>
-          </div>
-          <input type="tel" placeholder="Mobile number (09XX XXX XXXX)"/>
-          <input type="email" placeholder="Email address"/>
-          <button class="form-submit" onclick="handleSubmit(this)">📦 Send Me the Free Toolkit →</button>
-        </div>
+         <!-- Systeme.io embedded form -->
+        <form method="post" action="https://systeme.io/embedded/41511496/subscription" style="display:flex;flex-direction:column;gap:12px;">
+          <input type="text" name="first_name" placeholder="First name" required/>
+          <input type="text" name="last_name" placeholder="Last name"/>
+          <input type="email" name="email" placeholder="Email address" required/>
+          <input type="tel" name="phone" placeholder="Mobile number (09XX XXX XXXX)"/>
+          <button type="submit" class="form-submit">📦 Send Me the Free Toolkit →</button>
+        </form>
+       
         <p class="form-note">🔒 Zero spam. Your info is private and never shared.</p>
       </div>
     </div>
