@@ -481,20 +481,89 @@
       <div class="form-box">
         <div class="form-box-title">Get Your Free Kit Now</div>
         <div class="form-box-sub">Takes 30 seconds. We'll send everything straight to your inbox.</div>
+
          <!-- Systeme.io embedded form -->
-        <form method="post" action="https://systeme.io/embedded/41511496/subscription" style="display:flex;flex-direction:column;gap:12px;">
-          <input type="text" name="first_name" placeholder="First name" required/>
-          <input type="text" name="last_name" placeholder="Last name"/>
-          <input type="email" name="email" placeholder="Email address" required/>
-          <input type="tel" name="phone" placeholder="Mobile number (09XX XXX XXXX)"/>
-          <button type="submit" class="form-submit">📦 Send Me the Free Toolkit →</button>
-        </form>
-       
+        <div id="systeme-form-wrapper">
+          <script id="form-script-tag-24285423" src="https://larosa-shanev.systeme.io/public/remote/page/4151149622caf08832a642b6e2eeac1d877defca.js"></script>
+        </div>
+
         <p class="form-note">🔒 Zero spam. Your info is private and never shared.</p>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Systeme.io form override styles to match page design -->
+<style>
+  #systeme-form-wrapper {
+    margin: 4px 0 12px;
+  }
+
+  /* Target Systeme.io injected inputs */
+  #systeme-form-wrapper input[type="text"],
+  #systeme-form-wrapper input[type="email"],
+  #systeme-form-wrapper input[type="tel"],
+  #systeme-form-wrapper input[type="phone"] {
+    background: rgba(255,255,255,0.06) !important;
+    border: 1.5px solid rgba(255,255,255,0.1) !important;
+    color: #E8E6DF !important;
+    padding: 14px 18px !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 0.88rem !important;
+    border-radius: 6px !important;
+    width: 100% !important;
+    margin-bottom: 12px !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+  }
+
+  #systeme-form-wrapper input:focus {
+    border-color: #C9A84C !important;
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.1) !important;
+  }
+
+  #systeme-form-wrapper input::placeholder {
+    color: #8A8F9A !important;
+  }
+
+  /* Target Systeme.io submit button */
+  #systeme-form-wrapper button[type="submit"],
+  #systeme-form-wrapper .btn,
+  #systeme-form-wrapper input[type="submit"] {
+    width: 100% !important;
+    background: #C9A84C !important;
+    border: none !important;
+    color: #0B0F1A !important;
+    padding: 16px 32px !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.06em !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    transition: all 0.25s !important;
+    margin-top: 4px !important;
+  }
+
+  #systeme-form-wrapper button[type="submit"]:hover,
+  #systeme-form-wrapper .btn:hover,
+  #systeme-form-wrapper input[type="submit"]:hover {
+    background: #E8C96A !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 32px rgba(201,168,76,0.25) !important;
+  }
+
+  /* Remove any default white backgrounds Systeme.io adds */
+  #systeme-form-wrapper form,
+  #systeme-form-wrapper .f-row,
+  #systeme-form-wrapper > div {
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+</style>
 
 <footer>
   <div class="footer-logo">Shane <span>La Rosa</span></div>
@@ -506,28 +575,7 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  function handleSubmit(btn) {
-    const box = btn.closest('.form-box');
-    const inputs = box.querySelectorAll('input');
-    const firstName = inputs[0].value.trim();
-    const phone = inputs[2].value.trim();
-    if (!firstName || !phone) {
-      btn.style.background = '#c0392b';
-      btn.style.color = '#fff';
-      btn.textContent = '⚠ Please enter your name & number';
-      setTimeout(() => {
-        btn.style.background = '';
-        btn.style.color = '';
-        btn.textContent = '📦 Send Me the Free Toolkit →';
-      }, 2400);
-      return;
-    }
-    btn.textContent = '✓ Check your inbox — kit is on its way!';
-    btn.style.background = '#4A6741';
-    btn.style.color = '#fff';
-    inputs.forEach(i => { i.value = ''; i.disabled = true; });
-  }
 </script>
 </body>
 </html>
+
