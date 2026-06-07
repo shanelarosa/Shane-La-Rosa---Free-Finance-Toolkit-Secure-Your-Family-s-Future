@@ -482,59 +482,22 @@
         <div class="form-box-title">Get Your Free Kit Now</div>
         <div class="form-box-sub">Takes 30 seconds. We'll send everything straight to your inbox.</div>
 
-           <!-- Systeme.io live funnel embedded via iframe -->
-        <div id="systeme-form-wrapper">
-          <iframe 
-            src="https://larosa-shanev.systeme.io/cd7b2454"
-            width="100%"
-            height="420"
-            frameborder="0"
-            scrolling="no"
-            style="border:none;width:100%;min-height:420px;background:transparent;border-radius:6px;overflow:hidden;"
-            id="systeme-iframe">
-          </iframe>
-        </div>
+     <!-- Brevo signup form embedded -->
+        <iframe
+          src="https://d1630e57.sibforms.com/serve/MUIFAFuwhYXBRbEm42F_LxplSNcgyN7La7n6Ek_0M2dQ2xUZBB6sPS5yGglPic1HlHZvE2YexySov5IfXyKxRAqMkdZY0c2hZDPSKjl4ZynEuaOTPGJkGWFMxdnggxzjmGgnUEtogKr6_r1WtgrZ3Fyh5HlKnJ_xbQTkr_YsJNM3luyVNXP14LBu1lb3gX884PXExtr95Z3t11j-Hg=="
+          width="100%"
+          height="500"
+          frameborder="0"
+          scrolling="auto"
+          allowfullscreen
+          style="display:block;width:100%;min-height:500px;border:none;border-radius:6px;">
+        </iframe>
 
         <p class="form-note">🔒 Zero spam. Your info is private and never shared.</p>
       </div>
     </div>
   </div>
 </section>
-
-<!-- Iframe auto-resize & style override -->
-<style>
-  #systeme-form-wrapper {
-    margin: 8px 0 12px;
-    border-radius: 6px;
-    overflow: hidden;
-  }
-
-  #systeme-iframe {
-    filter: invert(0);
-    color-scheme: dark;
-  }
-
-  /* Attempt to blend iframe background */
-  #systeme-form-wrapper iframe {
-    background: transparent !important;
-  }
-</style>
-
-<script>
-  // Auto-adjust iframe height based on content
-  const iframe = document.getElementById('systeme-iframe');
-  if (iframe) {
-    iframe.addEventListener('load', function() {
-      try {
-        const height = iframe.contentWindow.document.body.scrollHeight;
-        if (height > 100) iframe.style.height = height + 'px';
-      } catch(e) {
-        // Cross-origin restriction — use fixed height
-        iframe.style.height = '420px';
-      }
-    });
-  }
-</script>
 
 <footer>
   <div class="footer-logo">Shane <span>La Rosa</span></div>
@@ -549,3 +512,4 @@
 </script>
 </body>
 </html>
+     
